@@ -5,8 +5,8 @@ import { IoInformationCircle } from "react-icons/io5";
 const MainMovieInfo = ({ info }) => {
   const { original_title, overview } = info;
   return (
-    <div class="absolute inset-0 bg-gradient-to-l from-black">
-      <div className="top-[30%] mx-10 w-2/6 text-white absolute">
+    <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent">
+      <div className="absolute top-[30%] mx-10 w-2/6 text-white">
         <div className="flex flex-col mx-10">
           <h1 className="text-5xl font-bold">{original_title}</h1>
           <p className="text-md my-2">{overview}</p>

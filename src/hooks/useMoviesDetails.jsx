@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { POPULAR_MOVIES_URL, TMDB_API_OPTION } from "../constants/Constants";
+import {
+  TMDB_API_OPTION,
+  TMDB_POPULAR_MOVIES_URL,
+} from "../constants/Constants";
 
 const useMoviesDetails = () => {
   const [popularMoviesList, setPopularMoviesList] = useState([]);
@@ -11,7 +14,7 @@ const useMoviesDetails = () => {
 
   const getTMDBPopularMovies = async () => {
     try {
-      const res = await fetch(POPULAR_MOVIES_URL, TMDB_API_OPTION);
+      const res = await fetch(TMDB_POPULAR_MOVIES_URL, TMDB_API_OPTION);
       const popularMovies = await res.json();
       setPopularMoviesList(popularMovies);
       if (popularMovies?.results?.length > 0) {
